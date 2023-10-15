@@ -1,0 +1,715 @@
+* {box-sizing: border-box}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Gilroy;
+}
+@font-face {
+    font-family: Gilroy;
+    src: url(../fonts/Gilroy-Medium.ttf);
+}
+span{
+  cursor: pointer;
+}
+.heading{
+  position: fixed;
+  z-index: 100;
+  padding: 20px calc(8.5vw - 11.6px);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.menuDesc{
+  display: flex;
+  gap: calc(2.7vw - 0.19px);
+  align-items: center;
+  cursor: pointer;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+.menuDesc span{   
+  font-size: calc(0.3vw + 13.8px);
+  line-height: calc(0.3vw + 13.8px); 
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  transition: 0.3s;
+}
+.menuDesc span:hover{   
+  color: #FFB548;
+  transition: 0.3s;
+  text-decoration: underline;
+}
+
+.menu2img {
+  position: relative;
+  display: flex;
+  align-items: center;  
+} 
+
+#arrow{
+  margin-left: 16px;
+}
+.menu2img{
+  margin-left: 10px;
+}
+a {
+  color: inherit;
+  text-decoration: none; /* no underline */
+}
+
+.link {
+  color : #fff;
+  display: block;
+  margin-top: 5px;
+}
+.menuMobile {
+  width : 90px; 
+  text-align: center;
+  position: relative;
+  padding-top: 6px;
+  
+}
+#menuIcon{
+  color: #fff;
+  font-size: 20px;
+}
+#menuIcon:active{
+  color: #FFB548;
+}
+.link:active{
+  color: #FFB548;
+}
+.logo img{
+  width: calc(3.3vw + 86.8px);
+}
+.links {
+  clear:both;
+  width:100%;
+  height:0px;
+  overflow: hidden;
+  text-align: center;
+  transition: height 0.4s ease;
+  background-color: #090049ba;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+#touch {
+  position: absolute;
+  opacity: 0;
+  height: 0px;
+}    
+#touch:checked + .links {
+  height: 150px;
+}
+
+
+.langMob {
+  margin-top: 5px;
+  color : #fff;
+  display: block;
+}
+.langMobile {
+  width : 60px; 
+  text-align: center;
+  position: relative;
+  padding-top: 10px;
+}
+#dropdownImg{
+  color: #fff;
+  font-size: calc(0.3vw + 13.6px);
+}
+#dropdownImg:active{
+  color: #FFB548;
+}
+.langMob:active{
+  color: #FFB548;
+}
+.langsMob {
+  clear:both;
+  width: 80%;
+  height:0px;
+  overflow: hidden;
+  text-align: center;
+  transition: height 0.4s ease;
+  background-color: #090049ba;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+#touch2 {
+  position: absolute;
+  opacity: 0;
+  height: 0px;
+}  
+#arrow2{
+  margin: 3px 5px;
+}  
+#touch2:checked + .langsMob {
+  height: 70px;
+}
+.menuMobile{
+  display: none;
+}
+.mobile{
+  display: flex;
+  justify-content: right;
+  flex-basis: 0;
+  gap: 5px;
+  margin-top: 10px;
+}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #fff;
+  font-size: calc(4.6vw + 11.5px);
+  text-align: center;
+  padding-top: 300px;
+  font-family: Gilroy;
+  letter-spacing: 10px;
+}
+.text2 {
+    color: #fff;
+    font-size: calc(0.6vw + 12.3px);
+    text-align: center;
+    letter-spacing: 5px;
+    width: calc(36.1vw + 105.2px);
+    margin: 20px auto;
+    font-family: Gilroy;
+  }
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.firstSlide{
+    background: url(../images/1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.secondSlide{
+  background: url(../images/2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.thirdSlide{
+  background: url(../images/3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.button{
+  width: calc(6.5vw + 173.6px);
+  height: calc(0.6vw + 37.3px);
+  line-height: calc(0.6vw + 32.3px);
+  border-radius: 3px 3px 3px 3px;
+  border: 2px solid #E5C3A6;
+  color: #E5C3A6;
+  margin: 20px auto;
+  text-align: center;
+  font-size: calc(0.3vw + 13.6px);
+  transition: 1s ease;
+  text-transform: upprcase;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: #E5C3A6;
+  transition: 1s ease;
+  color: #fff;
+}
+.BgColor{
+  background-color: #090049;
+  transition: 2s;
+}
+
+.travelline{
+  height: 100px;
+  width: 100%;
+  background-color: #090049;
+  color: #fff;
+  font-size: 25px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.screen{
+  padding: 100px calc(17.7vw - 41px);
+}
+.screen h1{
+  color: #090049;
+  font-size: calc(2vw + 12.1px);
+  text-align: center;
+  font-family: Gilroy;
+  letter-spacing: 10px;
+}
+.line{
+  border-top: 2px solid #090049;
+  width: 100px;
+  margin: 50px auto;
+}
+.slogan{
+  background-color: rgb(231, 231, 231);
+  border-right: 2px solid #FFB548;
+  padding: 50px;
+  color: #090049;
+  font-size: calc(0.3vw + 13.6px);
+}
+p{
+  font-size: calc(0.3vw + 13.6px);
+}
+
+.carouselRooms{
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.rooms{
+  display: flex;
+  flex-wrap: nowrap;
+  position: absolute;
+}
+.room{
+  width: 33.3vw;
+  height: 700px !important;
+  transition: 1.5s ease;
+  padding: 20px;
+  display: none;
+}
+.roomInfo{
+  margin-top: 300px;
+}
+.room1{
+  background: url(../images/stanKSB.png);
+  background-repeat: no-repeat;
+  background-size: stretch;
+  background-position: center;
+}
+.room2{
+  background: url(../images/stanTwin.png);
+  background-repeat: no-repeat;
+  background-size: stretch;
+  background-position: right;
+}
+.room3{
+  background: url(../images/luxeKSB.png);
+  background-repeat: no-repeat;
+  background-size: stretch;
+  background-position: center;
+}
+.room4{
+  background: url(../images/luxeTwin.png);
+  background-repeat: no-repeat;
+  background-size: stretch;
+  background-position: center;
+}
+.roomInfo h1{
+  text-align: center;
+  color: #fff;
+  transition: 1s ease;
+}
+.roomInfo p{
+  text-align: center;
+  filter: opacity(0%);
+  color: #fff;
+  transform: translateY(-50px);
+  transition: 1s ease;
+}
+.buttonRoom{
+  filter: opacity(0%);
+  transform: translateY(-50px);
+}
+.room:hover .roomInfo p{
+  filter: opacity(100%);
+  transform: translateY(0px);
+  transition: 1s ease;
+}
+.room:hover .buttonRoom{
+  transform: translateY(0px);
+  filter: opacity(100%);
+  transition: 1s ease;
+}
+.room:hover .roomInfo h1{
+  transform: translateY(-50px);
+  transition: 1s ease;
+}
+.room:hover{
+  filter: sepia(90%);
+  transition: 1s ease;
+}
+.blue{
+  background-color:#090049;
+  text-align: center;
+}
+.blue h1{
+  color:#FFB548;
+}
+.lineOrange{
+  border-top: 2px solid #FFB548;
+  width: 100px;
+  margin: 50px auto;
+}
+.blue p{
+  color:#fff;
+}
+.carouselRooms .slick-prev,
+.carouselRooms .slick-next {
+  background: url('../images/Vector\ 2.svg') no-repeat; /* Замените 'path/to/arrow-image.png' на путь к изображению стрелок */
+  background-size: contain; /* Размер изображения стрелок */
+  width: 30px; /* Ширина стрелок */
+  height: 30px; /* Высота стрелок */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 50%; /* Расположение по вертикали в центре */
+  transform: translateY(-50%); /* Смещение по вертикали на половину высоты */
+  color: transparent; /* Сделать цвет текста прозрачным */
+  background-color: transparent; /* Сделать фон прозрачным */
+  border: none; /* Убрать границу */
+  outline: none; /* Убрать контур */
+  cursor: pointer;
+}
+
+.carouselRooms .slick-prev {
+  left: 20px; /* Расположение стрелки "Previous" слева */
+  z-index: 10;
+  transform: rotate(90px);
+  transform: rotate(90deg);
+}
+
+.carouselRooms .slick-next {
+  right: 20px; /* Расположение стрелки "Next" справа */
+  z-index: 10;
+  transform: rotate(-90deg);
+}
+
+.slick-prev,
+.slick-next {
+  background: url('../images/Vector\ 2.svg') no-repeat; /* Замените 'path/to/arrow-image.png' на путь к изображению стрелок */
+  background-size: contain; /* Размер изображения стрелок */
+  width: 30px; /* Ширина стрелок */
+  height: 30px; /* Высота стрелок */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 50%; /* Расположение по вертикали в центре */
+  transform: translateY(-50%); /* Смещение по вертикали на половину высоты */
+  color: transparent; /* Сделать цвет текста прозрачным */
+  background-color: transparent; /* Сделать фон прозрачным */
+  border: none; /* Убрать границу */
+  outline: none; /* Убрать контур */
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: 20px; /* Расположение стрелки "Previous" слева */
+  z-index: 10;
+  transform: rotate(90px);
+  transform: rotate(90deg);
+}
+
+.slick-next {
+  right: 20px; /* Расположение стрелки "Next" справа */
+  z-index: 10;
+  transform: rotate(-90deg);
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 50px;
+  justify-content: space-between;
+  background-color:#090049;
+  padding-left: 50px;
+  align-items: center;
+}
+.photos{
+  width: 60vw;
+  overflow: hidden;
+}
+.photo img{
+  width: 100%;
+}
+.galleryText{
+  width: 25vw;
+}
+.galleryText h1{
+  color:#FFB548;
+  font-size: calc(2vw + 12.1px);
+  font-family: Gilroy;
+  letter-spacing: 10px;
+}
+.galleryText p{
+  color:#fff;
+}
+.galleryText .lineOrange{
+  margin: 50px 0;
+}
+.map{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+.textMap{
+  width: 40vw;
+}
+iframe{
+  width: 600px;
+}
+.maps{
+  padding: 50px;
+}
+.textMap h1, p{
+  color:#090049;
+}
+.firstScreen{  
+  height: 90vh;
+  padding: 100px calc(17.7vw - 41px);
+  text-align: center;
+  border-bottom:#FFB548 2px solid;
+}
+.Rooms{
+  background: url(../images/10.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.About{
+  background: url(../images/4.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.firstScreen h1{
+  color:#ffffff;
+  margin-top: 25vh;
+  font-size: calc(3.2vw + 38.4px);
+}
+.StandartKSB{
+  background: url(../images/stdksb1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.StandartTwin{
+  background: url(../images/luxeksb1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.services{
+  background: url(../images/restaurant2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.contacts{
+  background: url(../images/5.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.facilities{
+  display: flex;
+}
+.orangeLeft{
+  background-color:#FFB548;
+  padding: 100px;
+  width: 50%;
+}
+.orangeRight{
+  padding: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  gap: 50px;
+}
+.block{
+  width: 150px;
+}
+.orangeLeft h1{
+  color:#090049;
+}
+@media screen and (max-width: 700px){
+  .room:hover .roomInfo p{
+    filter: opacity(100%);
+    transform: translateY(0px);
+    transition: 1s ease;
+  }
+  .room:hover .buttonRoom{
+    transform: translateY(0px);
+    filter: opacity(100%);
+    transition: 1s ease;
+  }
+  .room:hover .roomInfo h1{
+    transform: translateY(0px);
+    transition: 1s ease;
+  }
+  .room:hover{
+    filter: none;
+    transition: 1s ease;
+  }
+  .langMenu{
+      display: none;
+  }
+  .menuDesc{
+      display: none;
+  }
+  .menuMobile{
+      display: block;
+  }
+  .roomInfo p{
+    text-align: center;
+    filter: opacity(100%);
+    color: #fff;
+    transform: translateY(0px);
+    transition: 1s ease;
+  }
+  .buttonRoom{
+    filter: opacity(100%);
+    transform: translateY(0px);
+  }
+  .textMap{
+    width: 100%;
+  }
+  .maps{
+    padding: 20px;
+  }
+  .map{
+    padding: 30px;
+  }
+}
+
+footer{
+  background-color:#090049;
+  padding: 100px calc(17.7vw - 41px);
+}
+
+.info{
+  border-bottom:#FFB548 2px solid;
+  text-align: center;
+}
+.info h1{
+  color: #FFB548;
+}
+.infos p{
+  color: #fff;
+  text-align: center;
+}
+.numbers{
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+.socialMedias{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 50px auto;
+}
+.socialMedia img{
+  width: 30px;
+}
+@media screen and (max-width: 700px){
+  .facilities{
+    display: block;
+  }
+  .orangeLeft{
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+  }
+  .linefac{
+    margin: 0 auto !important;
+  }
+  .orangeRight{
+    width: 100%;
+    padding: 50px;
+    justify-content: center;
+  }
+  .block{
+    text-align: center;
+  }
+
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 50px;
+    justify-content: center;
+    background-color:#090049;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+  }
+  .photos{
+    width: 100%;
+    overflow: hidden;
+  }
+  .photo img{
+    width: 100%;
+  }
+  .galleryText{
+    width: 100%;
+  }
+  .galleryText h1{
+    color:#FFB548;
+    font-size: calc(2vw + 12.1px);
+    font-family: Gilroy;
+    letter-spacing: 10px;
+  }
+  .galleryText p{
+    color:#fff;
+  }
+  .galleryText .lineOrange{
+    margin: 0 auto;
+  }
+}

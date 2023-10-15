@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <title>О нас</title>
+</head>
+<body>
+    <header>
+      <div class="heading" id="navbar">
+        <div class="logo"><a href="../index.html"><img src="../images/logo.png"></a></div>
+        <div class="menuDesc">
+          <span><a href="../index.html">Charos</a></span>
+          <span><a href="../html/rooms.html">Таблица номеров</a></span>
+          <span><a href="../html/about.html">О нас</a></span>
+          <span><a href="../html/services.html">Услуги</a></span>
+          <span style="color: #FFB548 !important; text-decoration: underline;"><a href="../html/contact.html">Контакты</a></span>
+        </div>
+        <div class="mobile">
+        <div class="menuMobile">
+            <label for="touch"><span id="menuIcon">&#9776;</span></label>               
+            <input type="checkbox" id="touch">
+            <div class="links">
+              <span class="link"><a href="../index.html">Charos</a></span>
+              <span class="link"><a href="../html/about.html">О нас</a></span>
+              <span class="link"><a href="../html/rooms.html">Таблица<br>номеров</a></span>
+              <span class="link"><a href="../html/services.html">Услуги</a></span>
+              <span style="color: #FFB548 !important; text-decoration: underline;" class="link"><a href="../html/contact.html">Контакты</a></span>
+                
+            </div>
+        </div>
+        </div>                   
+    </div>       
+    </header>
+
+
+    <div class="firstScreen contacts">
+      <h1>КОНТАКТЫ</h1>
+    </div>
+
+<footer>
+  <div class="infos">
+    <div class="info">
+      <p>Гостинично-развлекательный комплекс Charos расположен в Бостанлыкском районе у посёлка Юсуфхона на побережье Чарвакского водохранилища.</p>
+    </div>
+    <div class="numbers">
+      <p>+998(95) 195-39-39</p>
+      <p>+998(95) 193-59-59</p>
+    </div>
+    <div class="numbers">
+      <p>charoshotel@mail.ru - mail</p>
+      <p>@deluxresort - телеграм</p>
+    </div>
+  </div>
+  <div class="socialMedias">
+      <div class="socialMedia"><img src="../images/instagram.png"></div>
+      <div class="socialMedia"><img src="../images/facebook.png"></div>
+      <div class="socialMedia"><img src="../images/telegram.png"></div>
+  </div>
+</footer>
+
+  
+  <script>
+    $(document).ready(function(){
+      $('.rooms').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1024, // Первый брейкпоинт
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('.photos').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
+    });
+  </script>
+<script src="../js/script.js"></script>
+<script src="../js/slider.js"></script>
+</body>
+</html>
